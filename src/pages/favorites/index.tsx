@@ -13,7 +13,7 @@ const Favorites = () => {
   const { favorites } = useFavorite();
   const { orderByStock } = useOrderBy()
 
-  favorites.sort((b: any, a: any, desc = true) => {
+  favorites.sort((b: any, a: any) => {
     if (["stock"].indexOf(orderByStock.value) == -1) {
       if (a[orderByStock.value] > b[orderByStock.value]) return 1;
       if (a[orderByStock.value] < b[orderByStock.value]) return -1;

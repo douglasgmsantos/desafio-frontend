@@ -22,7 +22,7 @@ interface IStock {
 const List: React.FC<IList> = ({ stocks }: IList) => {
   const { orderByStock } = useOrderBy();
 
-  stocks.sort((b: any, a: any, desc = true) => {
+  stocks.sort((b: any, a: any) => {
     if (["stock"].indexOf(orderByStock.value) == -1) {
       if (a[orderByStock.value] > b[orderByStock.value]) return 1;
       if (a[orderByStock.value] < b[orderByStock.value]) return -1;
