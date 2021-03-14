@@ -15,7 +15,7 @@ interface OrderBYContextData {
 const OrderBYContext = createContext<OrderBYContextData>({} as OrderBYContextData);
 
 const OrderByProvider: React.FC = ({ children }) => {
-  const [orderByOption, setOrderByOption] = useState<IOrderBy[]>([
+  const [orderByOption] = useState<IOrderBy[]>([
     { label: "Alfabética", value: "stock" },
     { label: "Preço", value: "price" },
     { label: "Variação", value: "variation" },
