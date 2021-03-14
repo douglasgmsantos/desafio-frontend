@@ -29,7 +29,7 @@ const Header = () => {
     setActiveMenu(!Boolean(activeMenu))
   }, [activeMenu]);
 
-  const [pages, setPages] = useState([
+  const [pages] = useState([
     {
       label: "Home",
       router: "/",
